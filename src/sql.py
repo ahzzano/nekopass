@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy import text
 
-import database.password_table as ptable
+import src.database.password_table as ptable
 
 engine = create_engine('sqlite+pysqlite:///:memory:', echo=True, future=True)
 
