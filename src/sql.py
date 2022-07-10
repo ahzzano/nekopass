@@ -3,7 +3,7 @@ from sqlalchemy import text
 
 import src.database.password_table as ptable
 
-engine = create_engine('sqlite+pysqlite:///database.db', future=True)
+engine = create_engine('sqlite+pysqlite:///./database.db', future=True)
 connection = engine.connect()
 password_table = ptable.create_password_table(engine)
 
