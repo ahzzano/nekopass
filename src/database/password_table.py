@@ -1,5 +1,5 @@
 from importlib.metadata import metadata
-from sqlalchemy import Table, Column, Integer, String, insert
+from sqlalchemy import Table, Column, Integer, String
 from sqlalchemy import MetaData
 from sqlalchemy import insert
 
