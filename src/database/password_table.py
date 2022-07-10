@@ -3,7 +3,7 @@ from sqlalchemy import Table, Column, Integer, String
 from sqlalchemy import MetaData
 from sqlalchemy import insert
 
-def create_password_table(engine):
+def create_password_table(engine) -> Table:
     metadata_obj = MetaData()
 
     password_table = Table(
