@@ -35,7 +35,10 @@ if __name__ == '__main__':
                 print(f'{acc[1]} | {acc[0]}')
 
         if command == 3:
-            continue
+            account = input('account >')
+            result = sql.get_account(account).fetchone()
+            print(f'account: {result[0]}')
+            print(f'password: {result[2]}')
 
         if command == 4:
             sql.connection.close()

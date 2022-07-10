@@ -19,3 +19,9 @@ def get_accounts():
     select_command = password_table.select()
     results = connection.execute(select_command)
     return results
+
+def get_account(account: str):
+    select_command = password_table.select().where(password_table.c.account_name == account)
+    result = connection.execute(select_command)
+    
+    return result
