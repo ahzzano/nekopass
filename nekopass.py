@@ -30,8 +30,7 @@ if __name__ == '__main__':
         if command == 2:
             accounts = sql.get_accounts() 
 
-            print(accounts)
-            for acc in accounts:
+            for acc in accounts.fetchall():
                 print(acc)
 
         if command == 3:

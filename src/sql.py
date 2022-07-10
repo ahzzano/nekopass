@@ -13,10 +13,9 @@ def engine_execute_command(command, *args):
 
 
 def add_password(account_name: str, password: str, nickname: str = ''):
-    ptable.insert_to_password_table(password_table, engine, {'account_name': account_name, 'nickname': nickname, 'password': password})
+    ptable.insert_to_password_table(password_table, connection, {'account_name': account_name, 'nickname': nickname, 'password': password})
 
 def get_accounts():
     select_command = password_table.select()
     results = connection.execute(select_command)
-
     return results
