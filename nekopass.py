@@ -30,8 +30,9 @@ if __name__ == '__main__':
         if command == 2:
             accounts = sql.get_accounts() 
 
+            print('Account | Account Name')
             for acc in accounts.fetchall():
-                print(acc)
+                print(f'{acc[1]} | {acc[2]}')
 
         if command == 3:
             continue
