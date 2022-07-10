@@ -28,12 +28,17 @@ if __name__ == '__main__':
             sql.add_password(account, password, nickname)
             
         if command == 2:
-            continue
+            accounts = sql.get_accounts() 
+
+            print(accounts)
+            for acc in accounts:
+                print(acc)
 
         if command == 3:
             continue
 
         if command == 4:
+            sql.connection.close()
             print('Goodbye!')
             exit()
             
